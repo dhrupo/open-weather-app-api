@@ -4,7 +4,7 @@ document.getElementById('search').addEventListener('click', () => {
     errorHandler("Please enter a city name");
     return;
   }
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=787782cf355584046bc318521c5b9783&units=metric`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=787782cf355584046bc318521c5b9783&units=metric`)
     .then(res => res.json())
     .then(data => {
       if (data.name === undefined) {
